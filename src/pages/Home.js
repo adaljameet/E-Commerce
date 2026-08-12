@@ -128,6 +128,32 @@ const Home = () => {
                     </div>
                 </section>
             </div>
+
+            <div className='dress-style-section'>
+                <section className='dress-style-box'>
+                    <h2 className='dress-style-title'>BROWSE BY DRESS STYLE</h2>
+                        <div className='dress-style-grid'>
+                            <div className='dress-style-item casual'>
+                                <img src={require('../assets/casual.png')} alt='casual'/>
+                                <h3>Casual</h3>
+                            </div>
+                            <div className='dress-style-item formal'>
+                                <img src={require('../assets/formal.png')} alt='formal'/>
+                                <h3>Formal</h3>
+                            </div>
+                            <div className='dress-style-item party'>
+                                <img src={require('../assets/party.png')} alt='party'/>
+                                <h3>Party</h3>
+                            </div>
+                            <div className='dress-style-item gym'>
+                                <img src={require('../assets/gym.png')} alt='gym'/>
+                                <h3>Gym</h3>
+                            </div>
+
+                        </div>
+                </section>
+
+            </div>
         </>
     )
 }

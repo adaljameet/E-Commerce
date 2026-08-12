@@ -30,7 +30,7 @@ const Card = ({ pdata }) => {
                             ${pdata.price}
                         </span>
                         <span className='old-price'>
-
+                            
                         </span>
                         <span className='discount'>
                             {pdata.discountPercentage}
