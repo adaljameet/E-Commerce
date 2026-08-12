@@ -2,9 +2,48 @@ import '../pages/Home.css'
 import Card from '../components/Card';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { FaStar } from 'react-icons/fa';
 
 
 const Home = () => {
+
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        initialSlide: 0,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    };
 
     const [product, setProduct] = useState(null);
 
@@ -23,6 +62,7 @@ const Home = () => {
         getdata()
 
     }, [])
+
 
 
     return (
@@ -132,7 +172,7 @@ const Home = () => {
             <div className='dress-style-section container'>
                 <section className='dress-style-box'>
                     <h2 className='dress-style-title'>BROWSE BY DRESS STYLE</h2>
-                    <div className='row py-3' >
+                    <div className='row g-3 gy-3 py-3' >
                         <div className='col-12 col-md-5'>
                             <div className='style-card '>
                                 <img src={require('../assets/casual.png')} alt='casual' className='casual' />
@@ -161,8 +201,99 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-
             </div>
+
+            <section className='customer-section'>
+                <div className='container-fluid'>
+                    <div className='customer-hrader'>
+                        <h2>OUR HAPPY CUSTOMERS</h2>
+                    </div>
+                    <Slider {...settings}>
+                        <div className='customer-slider container'>
+                            <div className='customer-card'>
+                                <div className="stars">
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                </div>
+                                <h5>Sarah M. <span><img src={require('../assets/tick.png')} alt='tick' /></span></h5>
+                                <p>
+                                    "Finding clothes that align with my personal style
+                                    used to be a challenge until I discovered Shop.co.
+                                    The range of options they offer is truly remarkable,
+                                    catering to a variety of tastes and occasions."
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className='customer-slider'>
+                            <div className='customer-card'>
+                                <div className="stars">
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                </div>
+                                <h5>Alex K. <span><img src={require('../assets/tick.png')} alt='tick' /></span></h5>
+                                <p>
+                                    "Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions.”
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className='customer-slider'>
+                            <div className='customer-card'>
+                                <div className="stars">
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                </div>
+                                <h5>James L. <span><img src={require('../assets/tick.png')} alt='tick' /></span></h5>
+                                <p>
+                                    "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className='customer-slider'>
+                            <div className='customer-card'>
+                                <div className="stars">
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                </div>
+                                <h5>Mooen <span><img src={require('../assets/tick.png')} alt='tick' /></span></h5>
+                                <p>
+                                    "As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends.”
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className='customer-slider'>
+                            <div className='customer-card'>
+                                <div className="stars">
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                    <FaStar className='customer-star' />
+                                </div>
+                                <h5>Sarah M. <span><img src={require('../assets/tick.png')} alt='tick' /></span></h5>
+                                <p>
+                                    "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+                                </p>
+                            </div>
+                        </div>
+                    </Slider>
+                </div >
+            </section >
         </>
     )
 }

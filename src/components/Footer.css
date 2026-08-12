@@ -1,0 +1,304 @@
+.footer-section {
+    background: #f1f1f1;
+    padding: 0 0 35px;
+    position: relative;
+}
+
+.newsletter-box {
+    background: #000;
+    border-radius: 0 0 20px 20px;
+    padding: 35px 65px;
+    position: relative;
+    top: 0;
+}
+
+.newsletter-box h2 {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin: 0;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.email-box {
+    width: 100%;
+    height: 48px;
+    background: #fff;
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+}
+
+.email-box i {
+    color: #999;
+    font-size: 18px;
+}
+
+.email-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-left: 12px;
+    font-size: 14px;
+}
+
+.email-box input::placeholder {
+    color: #999;
+}
+
+.subscribe-btn {
+    width: 100%;
+    height: 47px;
+
+    background: #fff;
+    color: #111;
+
+    border: none;
+    border-radius: 30px;
+
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.subscribe-btn:hover {
+    background: #e8e8e8;
+}
+
+.footer-content {
+    padding: 45px 0 40px;
+}
+
+.footer-about h2 {
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+.footer-about p {
+    max-width: 260px;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 29px;
+    height: 29px;
+
+    border: 1px solid #ccc;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: #000;
+    background: #fff;
+
+    font-size: 13px;
+}
+
+.social-icons a:nth-child(2) {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.footer-column h4 {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.footer-column a {
+    display: block;
+    color: #777;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.footer-column a:hover {
+    color: #000;
+}
+
+.footer-bottom {
+    border-top: 1px solid #d5d5d5;
+
+    padding-top: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    color: #777;
+    font-size: 13px;
+    margin: 0;
+}
+
+.payment-methods {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment {
+    height: 31px;
+    min-width: 48px;
+
+    background: #fff;
+
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.visa {
+    color: #1a3fc5;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.mastercard {
+    position: relative;
+    width: 48px;
+}
+
+.mastercard span {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.mastercard span:first-child {
+    background: #eb001b;
+    left: 13px;
+}
+
+.mastercard span:last-child {
+    background: #f79e1b;
+    right: 8px;
+}
+
+.paypal {
+    color: #174ea6;
+    font-style: italic;
+}
+
+.apple {
+    color: #000;
+}
+
+.gpay span {
+    color: #4285f4;
+    font-weight: 800;
+}
+
+@media (max-width: 991px) {
+
+    .newsletter-box {
+        padding: 35px 40px;
+    }
+
+    .newsletter-box h2 {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
+
+    .footer-content {
+        padding-top: 40px;
+    }
+
+    .footer-about {
+        margin-bottom: 35px;
+    }
+
+    .footer-column {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .newsletter-box {
+        padding: 30px 25px;
+        border-radius: 0 0 18px 18px;
+    }
+
+    .newsletter-box h2 {
+        font-size: 28px;
+    }
+
+    .footer-content {
+        padding: 35px 15px;
+    }
+
+    .footer-about h2 {
+        font-size: 30px;
+    }
+
+    .footer-bottom {
+        margin: 0 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .payment-methods {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .newsletter-box {
+        padding: 28px 20px;
+    }
+
+    .newsletter-box h2 {
+        font-size: 24px;
+    }
+
+    .footer-column h4 {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .footer-column a {
+        font-size: 13px;
+    }
+
+    .footer-bottom p {
+        font-size: 11px;
+    }
+}
