@@ -129,28 +129,37 @@ const Home = () => {
                 </section>
             </div>
 
-            <div className='dress-style-section'>
+            <div className='dress-style-section container'>
                 <section className='dress-style-box'>
                     <h2 className='dress-style-title'>BROWSE BY DRESS STYLE</h2>
-                        <div className='dress-style-grid'>
-                            <div className='dress-style-item casual'>
-                                <img src={require('../assets/casual.png')} alt='casual'/>
+                    <div className='row py-3' >
+                        <div className='col-12 col-md-5'>
+                            <div className='style-card '>
+                                <img src={require('../assets/casual.png')} alt='casual' className='casual' />
                                 <h3>Casual</h3>
                             </div>
-                            <div className='dress-style-item formal'>
-                                <img src={require('../assets/formal.png')} alt='formal'/>
+                        </div>
+                        <div className='col-12 col-md-7'>
+                            <div className='style-card '>
+                                <img src={require('../assets/formal.png')} alt='formal' className='formal' />
                                 <h3>Formal</h3>
                             </div>
-                            <div className='dress-style-item party'>
-                                <img src={require('../assets/party.png')} alt='party'/>
+                        </div>
+                    </div>
+                    <div className='row g-3 gy-3'>
+                        <div className='col-12 col-md-7'>
+                            <div className='style-card '>
+                                <img src={require('../assets/party.png')} alt='party' className='party' />
                                 <h3>Party</h3>
                             </div>
-                            <div className='dress-style-item gym'>
-                                <img src={require('../assets/gym.png')} alt='gym'/>
+                        </div>
+                        <div className='col-12 col-md-5'>
+                            <div className='style-card '>
+                                <img src={require('../assets/gym.png')} alt='gym' className='gym' />
                                 <h3>Gym</h3>
                             </div>
-
                         </div>
+                    </div>
                 </section>
 
             </div>
