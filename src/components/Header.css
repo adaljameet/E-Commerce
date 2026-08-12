@@ -1,0 +1,117 @@
+.logo {
+    font-family: 'FONTSPRING DEMO - Integral CF Extra';
+    font-size: 33px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav-link {
+    font-family: 'Satoshi';
+    font-style: normal;
+    color: #000000;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+.form-control {
+    padding: 12px;
+    display: flex;
+    gap: 40px;
+    width: 576px;
+    border-radius: 50px;
+    border: none;
+    background-color: #F0F0F0;
+}
+
+.btn {
+    padding: 0;
+    border-radius: 50px;
+}
+
+.shop-navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around !important;
+    min-height: 75px;
+    background: #fff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.shop-logo {
+    font-family: 'FONTSPRING DEMO - Integral CF Extra';
+    font-size: 33px;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    letter-spacing: -1.5px;
+
+}
+
+.nav-link {
+    color: #333 !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: #000 !important;
+}
+
+.nav-link svg {
+    margin-left: 4px;
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    width: 576px;
+    height: 42px;
+    background: #f4f4f4;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 16px 12px;
+}
+
+.search-icon {
+    color: #777;
+    font-size: 20px;
+}
+
+.search-box input {
+    width: 576px;
+    border: none;
+    outline: none;
+    background: transparent;
+    margin-left: 12px;
+    font-size: 13px;
+}
+
+.search-box input::placeholder {
+    color: #999;
+}
+
+
+/* ================= NAV ICONS ================= */
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    color: #222;
+}
+
+.nav-icons svg {
+    cursor: pointer;
+}
