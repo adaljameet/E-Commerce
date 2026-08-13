@@ -1,18 +1,17 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Footer from './components/Footer';
-
+import ProductDetail from './pages/ProductDetail';
 function App() {
   return (
     <>
-      <Header />
+
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/productdetail' element={<ProductDetail />} />
       </Routes>
-        <Footer/>
+
 
     </>
   );

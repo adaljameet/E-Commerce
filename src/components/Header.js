@@ -1,6 +1,7 @@
 import React from 'react'
 import '../components/Header.css'
 import { FaChevronDown, FaSearch, FaShoppingCart, FaUserCircle } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
@@ -8,9 +9,9 @@ const Header = () => {
             <nav className="navbar navbar-expand-lg shop-navbar">
                 <div className="container px-lg-5">
 
-                    <a className="navbar-brand shop-logo" href="/">
+                    <Link className="navbar-brand shop-logo" to="/">
                         SHOP.CO
-                    </a>
+                    </Link>
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -25,27 +26,27 @@ const Header = () => {
                         <ul className="navbar-nav ms-lg-4 gap-lg-3">
 
                             <li className="nav-item">
-                                <a className="nav-link" href="/">
+                                <Link className="nav-link" to="/">
                                     Shop <FaChevronDown size={10} />
-                                </a>
+                                </Link>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="/">
+                                <Link className="nav-link" to="/">
                                     On Sale
-                                </a>
+                                </Link>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="/">
+                                <Link className="nav-link" to="/">
                                     New Arrivals
-                                </a>
+                                </Link>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="/">
+                                <Link className="nav-link" to="/">
                                     Brands
-                                </a>
+                                </Link>
                             </li>
 
                         </ul>

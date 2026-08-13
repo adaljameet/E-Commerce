@@ -6,6 +6,8 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from 'react-icons/fa';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 
 const Home = () => {
@@ -67,6 +69,7 @@ const Home = () => {
 
     return (
         <>
+            <Header />
             <div className="shop-page">
                 <section className="hero-section">
                     <div className="container-fluid px-lg-5">
@@ -294,6 +297,7 @@ const Home = () => {
                     </Slider>
                 </div >
             </section >
+            <Footer />
         </>
     )
 }
