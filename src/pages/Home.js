@@ -50,7 +50,7 @@ const Home = () => {
 
     async function getdata() {
         await axios.get(
-            "https://dummyjson.com/products"
+            "https://dummyjson.com/products/category/mens-shirts"
         ).then((res) => {
             console.log(res.data);
             setProduct(res.data.products)

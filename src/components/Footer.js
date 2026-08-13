@@ -8,27 +8,27 @@ import { FaFacebook, FaGithub, FaInstagram, FaTwitter } from 'react-icons/fa'
 const Footer = () => {
     return (
         <>
-            <footer class="footer-section">
-                <div class="container">
-                    <div class="newsletter-box">
-                        <div class="row align-items-center">
-                            <div class="col-lg-7">
+            <footer className="footer-section">
+                <div className="container">
+                    <div className="newsletter-box">
+                        <div className="row align-items-center">
+                            <div className="col-lg-7">
                                 <h2>
                                     STAY UPTO DATE ABOUT<br />
                                     OUR LATEST OFFERS
                                 </h2>
                             </div>
 
-                            <div class="col-lg-5">
-                                <div class="newsletter-form">
-                                    <div class="email-box">
+                            <div className="col-lg-5">
+                                <div className="newsletter-form">
+                                    <div className="email-box">
                                         <BsEnvelope />
                                         <input
                                             type="email"
                                             placeholder="Enter your email address"
                                         />
                                     </div>
-                                    <button class="subscribe-btn">
+                                    <button className="subscribe-btn">
                                         Subscribe to Newsletter
                                     </button>
                                 </div>
@@ -36,15 +36,15 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div class="footer-content">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-12 footer-about">
+                    <div className="footer-content">
+                        <div className="row">
+                            <div className="col-lg-4 col-md-12 footer-about">
                                 <h2>SHOP.CO</h2>
                                 <p>
                                     We have clothes that suits your style and
                                     which you’re proud to wear. From women to men.
                                 </p>
-                                <div class="social-icons">
+                                <div className="social-icons">
 
                                     <Link to="/">
                                         <FaTwitter />
@@ -65,7 +65,7 @@ const Footer = () => {
                             </div>
 
 
-                            <div class="col-lg-2 col-md-3 col-6 footer-column">
+                            <div className="col-lg-2 col-md-3 col-6 footer-column">
                                 <h4>COMPANY</h4>
                                 <Link to="/">About</Link>
                                 <Link to="/">Features</Link>
@@ -74,7 +74,7 @@ const Footer = () => {
                             </div>
 
 
-                            <div class="col-lg-2 col-md-3 col-6 footer-column">
+                            <div className="col-lg-2 col-md-3 col-6 footer-column">
                                 <h4>HELP</h4>
                                 <Link to="/">Customer Support</Link>
                                 <Link to="/">Delivery Details</Link>
@@ -83,7 +83,7 @@ const Footer = () => {
                             </div>
 
 
-                            <div class="col-lg-2 col-md-3 col-6 footer-column">
+                            <div className="col-lg-2 col-md-3 col-6 footer-column">
                                 <h4>FAQ</h4>
                                 <Link to="/">Account</Link>
                                 <Link to="/">Manage Deliveries</Link>
@@ -91,7 +91,7 @@ const Footer = () => {
                                 <Link to="/">Payments</Link>
                             </div>
 
-                            <div class="col-lg-2 col-md-3 col-6 footer-column">
+                            <div className="col-lg-2 col-md-3 col-6 footer-column">
                                 <h4>RESOURCES</h4>
                                 <Link to="/">Free eBooks</Link>
                                 <Link to="/">Development Tutorial</Link>
@@ -102,31 +102,31 @@ const Footer = () => {
                     </div>
 
 
-                    <div class="footer-bottom">
+                    <div className="footer-bottom">
                         <p>
                             Shop.co © 2000-2023, All Rights Reserved
                         </p>
 
-                        <div class="payment-methods">
+                        <div className="payment-methods">
 
-                            <div class="payment visa">
+                            <div className="payment visa">
                                 VISA
                             </div>
 
-                            <div class="payment mastercard">
+                            <div className="payment mastercard">
                                 <span></span>
                                 <span></span>
                             </div>
 
-                            <div class="payment paypal">
+                            <div className="payment paypal">
                                 PayPal
                             </div>
 
-                            <div class="payment apple">
-                                <i class="fa-brands fa-apple"></i>Pay
+                            <div className="payment apple">
+                                <i className="fa-brands fa-apple"></i>Pay
                             </div>
 
-                            <div class="payment gpay">
+                            <div className="payment gpay">
                                 <span>G</span> Pay
                             </div>
                         </div>
