@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import '../pages/ProductDetail.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -6,10 +5,12 @@ import { Link } from 'react-router-dom'
 import { MdOutlineChevronRight, MdOutlineStar } from 'react-icons/md'
 import { FaChevronDown, FaSlidersH, } from 'react-icons/fa'
 import Card from '../components/Card'
+import { GoPlus } from 'react-icons/go'
+import { GrFormSubtract } from 'react-icons/gr'
 
 const ProductDetail = (pdata) => {
 
-    const [product, setProduct] = useState(null);
+
 
     return (
         <>
@@ -21,15 +22,15 @@ const ProductDetail = (pdata) => {
                 <section className='product-main row'>
                     <div className='col-lg-6 product-gallery'>
                         <div className='row'>
-                            <div className='col-3 thumbnail-column'>
+                            <div className='col-3 thumbmail-column'>
                                 <div className='thumbmail active'>
-                                    <img />
+                                    <img src={require('../assets/image 7.png')} alt='image1' />
                                 </div>
                                 <div className='thumbmail'>
-                                    <img />
+                                    <img src={require('../assets/image 7.png')} alt='image2' />
                                 </div>
                                 <div className='thumbmail'>
-                                    <img />
+                                    <img src={require('../assets/image 7.png')} alt='image3' />
                                 </div>
                             </div>
                             <div className="col-9">
@@ -39,9 +40,7 @@ const ProductDetail = (pdata) => {
                                     />
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
 
                     <div className="col-lg-6 product-info">
@@ -50,13 +49,13 @@ const ProductDetail = (pdata) => {
 
                         <div className="product-rating">
                             <span className="review-stars">
-                                <MdOutlineStar/>
-                                <MdOutlineStar/>
-                                <MdOutlineStar/>
-                                <MdOutlineStar/>
-                                <MdOutlineStar/>
+                                <MdOutlineStar />
+                                <MdOutlineStar />
+                                <MdOutlineStar />
+                                <MdOutlineStar />
+                                <MdOutlineStar />
                             </span>
-                            <span>4.5/5</span>
+                            <span className='rating-number'>4.5/5</span>
                         </div>
 
                         <div className="product-price">
@@ -99,9 +98,9 @@ const ProductDetail = (pdata) => {
                         <div className="cart-row">
 
                             <div className="quantity">
-                                <button>−</button>
+                                <button><GrFormSubtract /></button>
                                 <span>1</span>
-                                <button>+</button>
+                                <button><GoPlus /></button>
                             </div>
 
                             <button className="add-cart">
@@ -213,9 +212,9 @@ const ProductDetail = (pdata) => {
                             <div class="review-card">
                                 <div class="review-top">
                                     <div class="review-stars">
-                                       <MdOutlineStar />
-                                       <MdOutlineStar />
-                                       <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
                                     </div>
                                     <span class="dots">•••</span>
                                 </div>
@@ -302,10 +301,10 @@ const ProductDetail = (pdata) => {
                             <div class="review-card">
                                 <div class="review-top">
                                     <div class="review-stars">
-                                       <MdOutlineStar />
-                                       <MdOutlineStar />
-                                       <MdOutlineStar />
-                                       <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
                                     </div>
                                     <span class="dots">•••</span>
 
@@ -342,13 +341,7 @@ const ProductDetail = (pdata) => {
                     <h2>YOU MIGHT ALSO LIKE</h2>
 
                     <div className="row g-3">
-
-                        {product && product.map((v, i) => {
-                            return (
-                                <Card pdata={v} key={i} />
-                            )
-                        })}
-
+                        <Card pdata/>
                     </div>
 
                 </section>

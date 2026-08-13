@@ -23,34 +23,36 @@ a {
     padding-bottom: 30px;
 }
 
-.thumbnail-column {
+.thumbmail-column {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.thumbnail {
-    height: 83px;
+.thumbmail {
+    width: 152px;
+    height: 167px;
     background: #f2f2f2;
     border-radius: 10px;
     overflow: hidden;
     border: 1px solid transparent;
 }
 
-.thumbnail.active {
+.thumbmail.active {
     border-color: #000;
 }
 
-.thumbnail img {
+.thumbmail img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
 .main-product-image {
-    height: 265px;
+    width: 444px;
+    height: 530px;
     background: #f1f1f1;
-    border-radius: 12px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,10 +69,11 @@ a {
     padding-left: 25px;
 }
 
+
 .product-info h1 {
-     font-family: 'FONTSPRING DEMO - Integral CF';
+    font-family: 'FONTSPRING DEMO - Integral CF';
     font-size: 40px;
-    font-weight: 700 ;
+    font-weight: 700;
     margin-bottom: 7px;
 }
 
@@ -88,7 +91,8 @@ a {
 }
 
 .product-price {
-    font-size: 23px;
+    font-family: 'Satoshi';
+    font-size: 32px;
     font-weight: 700;
     margin-top: 8px;
 }
@@ -100,18 +104,22 @@ a {
 }
 
 .product-price b {
+    font-family: 'Satoshi';
     color: #e66b6b;
     background: #ffe6e6;
     border-radius: 20px;
-    font-size: 10px;
+    font-weight: 500;
+    font-size: 16px;
     padding: 5px 10px;
     margin-left: 8px;
 }
 
 .product-description {
+    font-family: 'Satoshi';
+    font-weight: 400;
     color: #777;
-    font-size: 10px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 22px;
     max-width: 500px;
     margin-top: 10px;
 }
@@ -121,8 +129,11 @@ a {
 }
 
 .option-title {
-    font-size: 10px;
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 16px;
     color: #777;
+    line-height: 100%;
     margin-bottom: 8px;
 }
 
@@ -133,8 +144,8 @@ a {
 }
 
 .color {
-    width: 20px;
-    height: 20px;
+    width: 37px;
+    height: 37px;
     border-radius: 50%;
     border: none;
 }
@@ -158,11 +169,13 @@ a {
 }
 
 .size-options button {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 16px;
     border: none;
     background: #f2f2f2;
     border-radius: 20px;
-    padding: 7px 15px;
-    font-size: 9px;
+    padding: 12px 24px 12px 24px;
 }
 
 .size-options .selected {
@@ -176,29 +189,40 @@ a {
 }
 
 .quantity {
-    width: 88px;
-    height: 30px;
+    width: 170px;
+    height: 52px;
+    padding: 16px 20px 16px 20px;
     background: #f2f2f2;
-    border-radius: 20px;
+    border-radius: 62px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 12px;
 }
 
 .quantity button {
+    font-size: 20px;
     border: none;
     background: transparent;
 }
 
+.quantity span {
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+}
+
 .add-cart {
-    flex: 1;
-    height: 30px;
+    width: 400px;
+    height: 52px;
+    padding: 16px 54px 16px 54px;
     border: none;
     background: #000;
     color: #fff;
-    border-radius: 20px;
-    font-size: 10px;
+    border-radius: 62px;
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 16px;
 }
 
 .review-tabs {
@@ -207,12 +231,16 @@ a {
 }
 
 .review-tabs button {
+    font-family: 'Satoshi';
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
     width: 100%;
     background: transparent;
     border: none;
     height: 40px;
     color: #777;
-    font-size: 11px;
+
 }
 
 .review-tabs .active-tab {
@@ -236,13 +264,17 @@ a {
 }
 
 .reviews-header h3 {
-    font-size: 13px;
+    font-family: 'Satoshi';
+    font-size: 24px;
     font-weight: 700;
 }
 
 .reviews-header h3 span {
+    font-family: 'Satoshi';
+    font-weight: 400;
     color: #777;
-    font-size: 9px;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 .review-actions {
@@ -258,19 +290,31 @@ a {
 }
 
 .filter-btn {
-    width: 30px;
-    background: #f2f2f2;
+    width: 48px !important;
+    height: 48px !important;
+    background: #f2f2f2 !important;
 }
 
 .latest-btn {
-    background: #f2f2f2;
-    padding: 0 14px;
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 16px !important;
+    width: 120px;
+    height: 48px !important;
+    background: #f2f2f2 !important;
+    padding: 16px 20px 16px 20px !important;
 }
 
 .write-review {
+    font-family: 'Satoshi';
+    line-height: 100%;
+    font-weight: 500;
+    font-size: 16px !important;
+    width: 166px;
+    height: 48px !important;
     background: #000;
     color: #fff;
-    padding: 0 18px;
+    padding: 16px 20px 16px 20px;
 }
 
 .reviews-section {
@@ -347,6 +391,12 @@ a {
     background: #fff;
 }
 
+.rating-number {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 16px;
+}
+
 .review-top {
     display: flex;
     justify-content: space-between;
@@ -356,7 +406,7 @@ a {
 
 .review-stars {
     color: #ffb82e;
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: 1px;
     line-height: 1;
 }
@@ -368,8 +418,10 @@ a {
 }
 
 .review-card h3 {
-    font-size: 15px;
-    font-weight: 600;
+    font-family: 'Satoshi';
+    line-height: 22px;
+    font-size: 20px;
+    font-weight: 700;
     margin-bottom: 10px;
 }
 
@@ -377,26 +429,32 @@ a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 15px;
-    height: 15px;
+    width: 19px;
+    height: 19px;
     border-radius: 50%;
     background: #08a844;
     color: white;
-    font-size: 9px;
+    font-size: 15px;
     margin-left: 3px;
 }
 
 .review-card p {
+    font-family: 'Satoshi';
+    font-weight: 400;
     color: #777;
-    font-size: 12px;
-    line-height: 1.45;
+    font-size: 16px;
+    line-height: 22px;
     margin-bottom: 18px;
-    max-width: 470px;
+    width: 552px;
+    height: 66px;
 }
 
 .posted {
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
     color: #555;
-    font-size: 12px;
 }
 
 .load-more-wrapper {
@@ -412,19 +470,19 @@ a {
     border-radius: 25px;
     padding: 11px 35px;
     font-size: 12px;
-    cursor: pointer;
 }
 
-.load-more:hover {
-    background: #f5f5f5;
-}
 
 .load-more button {
+    width: 230px;
+    height: 52px;
     border: 1px solid #ddd;
     background: #fff;
-    border-radius: 20px;
-    padding: 8px 25px;
-    font-size: 9px;
+    border-radius: 62px;
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
 }
 
 .also-like {
@@ -502,11 +560,12 @@ a {
         padding-left: 10px;
     }
 
-    .main-product-image {
-        height: 300px;
+    .main-product-image img {
+        height: 290px;
+        width: 358px;
     }
 
-    .thumbnail {
+    .thumbmail {
         height: 90px;
     }
 
