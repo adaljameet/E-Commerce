@@ -3,44 +3,59 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 import { MdOutlineChevronRight, MdOutlineStar } from 'react-icons/md'
-import { FaChevronDown, FaSlidersH, } from 'react-icons/fa'
+import { FaChevronDown, FaSlidersH } from 'react-icons/fa'
 import Card from '../components/Card'
 import { GoPlus } from 'react-icons/go'
 import { GrFormSubtract } from 'react-icons/gr'
 
 const ProductDetail = (pdata) => {
 
-
+    const productImage = require('../assets/image 7.png')
 
     return (
         <>
             <Header />
-            <main className='container'>
-                <div className='breadcrumb-area'>
-                    <Link to='/'>Home</Link><span><MdOutlineChevronRight /></span><Link to='/' >Shop</Link><span><MdOutlineChevronRight /></span><Link to='/'>Men</Link><span><MdOutlineChevronRight /></span><Link to='/'>T-shirts</Link>
+
+            <main className="container product-detail-container">
+
+                <div className="breadcrumb-area">
+                    <Link to="/">Home</Link>
+                    <span><MdOutlineChevronRight /></span>
+                    <Link to="/">Shop</Link>
+                    <span><MdOutlineChevronRight /></span>
+                    <Link to="/">Men</Link>
+                    <span><MdOutlineChevronRight /></span>
+                    <Link to="/">T-shirts</Link>
                 </div>
-                <section className='product-main row'>
-                    <div className='col-lg-6 product-gallery'>
-                        <div className='row'>
-                            <div className='col-3 thumbmail-column'>
-                                <div className='thumbmail active'>
-                                    <img src={require('../assets/image 7.png')} alt='image1' />
-                                </div>
-                                <div className='thumbmail'>
-                                    <img src={require('../assets/image 7.png')} alt='image2' />
-                                </div>
-                                <div className='thumbmail'>
-                                    <img src={require('../assets/image 7.png')} alt='image3' />
-                                </div>
+
+                <section className="product-main row">
+
+                    <div className="col-lg-6 product-gallery">
+
+                        <div className="product-gallery-wrapper">
+
+                            <div className="main-product-image">
+                                <img src={productImage} alt="One Life Graphic T-Shirt" />
                             </div>
-                            <div className="col-9">
-                                <div className="main-product-image">
-                                    <img
-                                        alt="Product"
-                                    />
+
+                            <div className="thumbnail-column">
+
+                                <div className="thumbmail active">
+                                    <img src={productImage} alt="Product 1" />
                                 </div>
+
+                                <div className="thumbmail">
+                                    <img src={productImage} alt="Product 2" />
+                                </div>
+
+                                <div className="thumbmail">
+                                    <img src={productImage} alt="Product 3" />
+                                </div>
+
                             </div>
+
                         </div>
+
                     </div>
 
                     <div className="col-lg-6 product-info">
@@ -55,7 +70,8 @@ const ProductDetail = (pdata) => {
                                 <MdOutlineStar />
                                 <MdOutlineStar />
                             </span>
-                            <span className='rating-number'>4.5/5</span>
+
+                            <span className="rating-number">4.5/5</span>
                         </div>
 
                         <div className="product-price">
@@ -98,18 +114,25 @@ const ProductDetail = (pdata) => {
                         <div className="cart-row">
 
                             <div className="quantity">
-                                <button><GrFormSubtract /></button>
+                                <button>
+                                    <GrFormSubtract />
+                                </button>
+
                                 <span>1</span>
-                                <button><GoPlus /></button>
+
+                                <button>
+                                    <GoPlus />
+                                </button>
                             </div>
 
                             <button className="add-cart">
                                 Add to Cart
                             </button>
+
                         </div>
+
                     </div>
                 </section>
-
 
                 <section className="review-tabs">
                     <div className="row text-center">
@@ -127,14 +150,16 @@ const ProductDetail = (pdata) => {
                     </div>
                 </section>
 
-
                 <section className="reviews-section">
+
                     <div className="reviews-header">
+
                         <h3>
                             All Reviews <span>(451)</span>
                         </h3>
 
                         <div className="review-actions">
+
                             <button className="filter-btn">
                                 <FaSlidersH />
                             </button>
@@ -146,26 +171,30 @@ const ProductDetail = (pdata) => {
                             <button className="write-review">
                                 Write a Review
                             </button>
+
                         </div>
 
                     </div>
 
-                    <div class="row g-3">
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="review-card">
-                                <div class="review-top">
-                                    <div class="review-stars">
+                    <div className="row g-3">
+
+                        <div className="col-lg-6 col-md-6 col-12">
+                            <div className="review-card">
+                                <div className="review-top">
+                                    <div className="review-stars">
                                         <MdOutlineStar />
                                         <MdOutlineStar />
                                         <MdOutlineStar />
                                         <MdOutlineStar />
                                     </div>
-                                    <span class="dots">•••</span>
+                                    <span className="dots">•••</span>
                                 </div>
+
                                 <h3>
                                     Samantha D.
-                                    <span class="verified">✓</span>
+                                    <span className="verified">✓</span>
                                 </h3>
+
                                 <p>
                                     "I absolutely love this t-shirt! The design is unique
                                     and the fabric feels so comfortable. As a fellow designer,
@@ -173,180 +202,58 @@ const ProductDetail = (pdata) => {
                                     favorite go-to shirt."
                                 </p>
 
-                                <div class="posted">
+                                <div className="posted">
                                     Posted on August 14, 2023
                                 </div>
                             </div>
                         </div>
 
-
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="review-card">
-                                <div class="review-top">
-                                    <div class="review-stars">
+                        <div className="col-lg-6 col-md-6 col-12">
+                            <div className="review-card">
+                                <div className="review-top">
+                                    <div className="review-stars">
                                         <MdOutlineStar />
                                         <MdOutlineStar />
                                         <MdOutlineStar />
                                         <MdOutlineStar />
                                     </div>
-                                    <span class="dots">•••</span>
+                                    <span className="dots">•••</span>
                                 </div>
+
                                 <h3>
                                     Alex M.
-                                    <span class="verified">✓</span>
+                                    <span className="verified">✓</span>
                                 </h3>
+
                                 <p>
                                     "The t-shirt exceeded my expectations! The colors are
-                                    vibrant and the print quality is top-notch. Being a UI/UX
-                                    designer myself, I'm quite picky about aesthetics, and
-                                    this t-shirt definitely gets a thumbs up from me."
+                                    vibrant and the print quality is top-notch."
                                 </p>
-                                <div class="posted">
+
+                                <div className="posted">
                                     Posted on August 15, 2023
                                 </div>
                             </div>
                         </div>
 
-
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="review-card">
-                                <div class="review-top">
-                                    <div class="review-stars">
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                    </div>
-                                    <span class="dots">•••</span>
-                                </div>
-                                <h3>
-                                    Ethan R.
-                                    <span class="verified">✓</span>
-                                </h3>
-
-                                <p>
-                                    "This t-shirt is a must-have for anyone who appreciates
-                                    good design. The minimalist yet stylish pattern caught
-                                    my eye, and the fit is perfect. I can see the designer's
-                                    touch in every aspect of this shirt."
-                                </p>
-                                <div class="posted">
-                                    Posted on August 16, 2023
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="review-card">
-                                <div class="review-top">
-
-                                    <div class="review-stars">
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                    </div>
-                                    <span class="dots">•••</span>
-                                </div>
-                                <h3>
-                                    Olivia P.
-                                    <span class="verified">✓</span>
-                                </h3>
-                                <p>
-                                    "As a UI/UX enthusiast, I value simplicity and
-                                    functionality. This t-shirt not only represents those
-                                    principles but also feels great to wear. It's evident
-                                    that the designer poured their creativity into making
-                                    this t-shirt stand out."
-                                </p>
-
-                                <div class="posted">
-                                    Posted on August 17, 2023
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="review-card">
-                                <div class="review-top">
-                                    <div class="review-stars">
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                    </div>
-                                    <span class="dots">•••</span>
-                                </div>
-
-                                <h3>
-                                    Liam K.
-                                    <span class="verified">✓</span>
-                                </h3>
-
-                                <p>
-                                    "This t-shirt is a fusion of comfort and creativity.
-                                    The fabric is soft, and the design speaks volumes about
-                                    the designer's skill. It's like wearing a piece of art
-                                    that reflects my passion for both design and fashion."
-                                </p>
-
-                                <div class="posted">
-                                    Posted on August 18, 2023
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-6 col-md-6 col-12">
-                            <div class="review-card">
-                                <div class="review-top">
-                                    <div class="review-stars">
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                        <MdOutlineStar />
-                                    </div>
-                                    <span class="dots">•••</span>
-
-                                </div>
-                                <h3>
-                                    Ava H.
-                                    <span class="verified">✓</span>
-                                </h3>
-                                <p>
-                                    "I'm not just wearing a t-shirt; I'm wearing a piece of
-                                    design philosophy. The intricate details and thoughtful
-                                    layout of the design make this shirt a conversation
-                                    starter."
-                                </p>
-
-                                <div class="posted">
-                                    Posted on August 19, 2023
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div className="load-more">
-                        <button>
-                            Load More Reviews
-                        </button>
+                        <button>Load More Reviews</button>
                     </div>
 
                 </section>
 
-
                 <section className="also-like">
-
                     <h2>YOU MIGHT ALSO LIKE</h2>
 
                     <div className="row g-3">
-                        <Card pdata/>
+                        <Card pdata />
                     </div>
-
                 </section>
 
             </main>
+
             <Footer />
         </>
     )
