@@ -105,7 +105,7 @@ const ProductDetail = () => {
 
                             <div className="product-price">
                                 {(product.price * (1 - product.discountPercentage / 100)).toFixed(2)}
-                                <span>{product.price}</span>
+                                <span>${product.price}</span>
                                 <b>{product.discountPercentage}%</b>
                             </div>
 
