@@ -301,7 +301,7 @@
 }
 
 .customer-card {
-    
+
     min-height: 117px;
     border: 1px solid #e5e5e5;
     border-radius: 12px;
@@ -443,7 +443,7 @@
 
     .hero-content h1 {
         align-items: center;
-        width: 315px;
+        width: 300px;
         height: 93px;
         font-size: 36px;
         letter-spacing: -1px;
@@ -451,13 +451,13 @@
 
     .hero-content p {
         line-height: 20px;
-        width: 358px;
+        width: 320px;
         height: 50px;
         font-size: 13px;
     }
 
     .shop-btn {
-        width: 358px;
+        width: 282px;
         height: 52px;
         padding: 16px 54px 16px 54px;
     }

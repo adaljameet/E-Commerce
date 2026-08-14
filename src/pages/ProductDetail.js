@@ -10,7 +10,6 @@ import { GrFormSubtract } from 'react-icons/gr'
 
 const ProductDetail = (pdata) => {
 
-    const productImage = require('../assets/image 7.png')
 
     return (
         <>
@@ -35,21 +34,21 @@ const ProductDetail = (pdata) => {
                         <div className="product-gallery-wrapper">
 
                             <div className="main-product-image">
-                                <img src={productImage} alt="One Life Graphic T-Shirt" />
+                                <img src={require('../assets/image 7.png')} alt="One Life Graphic T-Shirt" />
                             </div>
 
                             <div className="thumbnail-column">
 
                                 <div className="thumbmail active">
-                                    <img src={productImage} alt="Product 1" />
+                                    <img src={require('../assets/image 7.png')} alt="Product 1" />
                                 </div>
 
                                 <div className="thumbmail">
-                                    <img src={productImage} alt="Product 2" />
+                                    <img src={require('../assets/image 7.png')} alt="Product 2" />
                                 </div>
 
                                 <div className="thumbmail">
-                                    <img src={productImage} alt="Product 3" />
+                                    <img src={require('../assets/image 7.png')} alt="Product 3" />
                                 </div>
 
                             </div>
@@ -236,6 +235,114 @@ const ProductDetail = (pdata) => {
                             </div>
                         </div>
 
+                        <div className="col-lg-6 col-md-6 col-12">
+                            <div className="review-card">
+                                <div className="review-top">
+                                    <div className="review-stars">
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                    </div>
+                                    <span className="dots">•••</span>
+                                </div>
+
+                                <h3>
+                                    Ethan R.
+                                    <span className="verified">✓</span>
+                                </h3>
+
+                                <p>
+                                    "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."
+                                </p>
+
+                                <div className="posted">
+                                    Posted on August 16, 2023
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div className="col-lg-6 col-md-6 col-12">
+                            <div className="review-card">
+                                <div className="review-top">
+                                    <div className="review-stars">
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                    </div>
+                                    <span className="dots">•••</span>
+                                </div>
+
+                                <h3>
+                                    Olivia P.
+                                    <span className="verified">✓</span>
+                                </h3>
+
+                                <p>
+                                    "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."
+                                </p>
+
+                                <div className="posted">
+                                    Posted on August 17, 2023
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 col-md-6 col-12">
+                            <div className="review-card">
+                                <div className="review-top">
+                                    <div className="review-stars">
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                    </div>
+                                    <span className="dots">•••</span>
+                                </div>
+
+                                <h3>
+                                    Liam K.
+                                    <span className="verified">✓</span>
+                                </h3>
+
+                                <p>
+                                    "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion."
+                                </p>
+
+                                <div className="posted">
+                                    Posted on August 18, 2023
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-6 col-md-6 col-12">
+                            <div className="review-card">
+                                <div className="review-top">
+                                    <div className="review-stars">
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                        <MdOutlineStar />
+                                    </div>
+                                    <span className="dots">•••</span>
+                                </div>
+
+                                <h3>
+                                    Ava H.
+                                    <span className="verified">✓</span>
+                                </h3>
+
+                                <p>
+                                    "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter."
+                                </p>
+
+                                <div className="posted">
+                                    Posted on August 19, 2023
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="load-more">
@@ -251,9 +358,7 @@ const ProductDetail = (pdata) => {
                         <Card pdata />
                     </div>
                 </section>
-
             </main>
-
             <Footer />
         </>
     )
