@@ -1,0 +1,585 @@
+.shop-page {
+    padding-top: 4px;
+    padding-bottom: 35px;
+}
+
+.breadcrumb-area {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 12px;
+    color: #777;
+    padding: 16px 0;
+}
+
+.breadcrumb-area i {
+    font-size: 7px;
+}
+
+.breadcrumb-area .active {
+    color: #222;
+}
+
+
+.filter-sidebar {
+    border: 1px solid #e3e3e3;
+    border-radius: 13px;
+    padding: 20px 24px 20px 24px;
+}
+
+.filter-title {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2px 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.filter-title h6 {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    margin: 0;
+}
+
+.filter-title i {
+    color: #999;
+    font-size: 12px;
+}
+
+.filter-category {
+    padding: 10px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.filter-category div,
+.dress-style div {
+    font-family: 'Satoshi';
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    color: #777;
+}
+
+.filter-category i,
+.dress-style i {
+    font-size: 8px;
+}
+
+.filter-box {
+    padding: 13px 0;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.filter-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.filter-heading strong {
+    font-family: 'Satoshi';
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.filter-heading i {
+    font-size: 8px;
+}
+
+
+
+.price-slider {
+    position: relative;
+    height: 15px;
+    margin: 0 8px;
+}
+
+.price-slider .line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 6px;
+    height: 3px;
+    background: #000;
+}
+
+.price-dot {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    top: 2px;
+    border-radius: 50%;
+    background: #000;
+}
+
+.price-dot.left {
+    left: -2px;
+}
+
+.price-dot.right {
+    right: -2px;
+}
+
+.price-values {
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding: 0 2px;
+}
+
+
+
+.colors {
+    display: grid;
+    grid-template-columns: repeat(5, 20px);
+    gap: 20px;
+}
+
+.color {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.color i {
+    color: white;
+    font-size: 9px;
+}
+
+.green {
+    background: #0bc34c;
+}
+
+.red {
+    background: #f41420;
+}
+
+.yellow {
+    background: #f9db00;
+}
+
+.orange {
+    background: #fa7500;
+}
+
+.cyan {
+    background: #16b9dc;
+}
+
+.blue {
+    background: #2349ed;
+}
+
+.purple {
+    background: #7411ed;
+}
+
+.pink {
+    background: #ed0b9b;
+}
+
+.white {
+    background: white;
+}
+
+.black {
+    background: black;
+}
+
+
+.sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.sizes button {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 14px;
+    border: none;
+    background: #f1f1f1;
+    color: #777;
+    border-radius: 15px;
+    padding: 7px 10px;
+}
+
+.sizes .selected-size {
+    background: #000;
+    color: white;
+}
+
+.dress-style {
+    border-bottom: none;
+}
+
+.dress-style .filter-heading {
+    margin-bottom: 6px;
+}
+
+.apply-btn {
+    font-family: 'Satoshi';
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    background: #000;
+    color: white;
+}
+
+
+
+.products-header {
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.products-header h1 {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.products-info {
+    display: flex;
+    gap: 15px;
+    color: #888;
+    font-size: 9px;
+}
+
+.products-info span {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.products-info strong {
+    color: #222;
+    font-weight: 600;
+}
+
+.products-info i {
+    font-size: 7px;
+    margin-left: 3px;
+}
+
+
+
+.product-grid {
+    row-gap: 22px;
+}
+
+.product-card {
+    width: 100%;
+    cursor: pointer;
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    transition: .3s;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-card h5 {
+    margin: 7px 0 4px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 14px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating span {
+    color: #ffc107;
+    letter-spacing: 0;
+    font-size: 11px;
+}
+
+.rating small {
+    color: #777;
+    font-size: 7px;
+}
+
+.price {
+    margin-top: 3px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.price del {
+    color: #999;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.discount {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 3px 6px;
+    background: #ffe7e7;
+    color: #ff4b4b;
+    border-radius: 15px;
+    font-size: 7px;
+    font-weight: 500;
+}
+
+
+
+.pagination-area {
+    border-top: 1px solid #e8e8e8;
+    margin-bottom: 60px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pagination-area button {
+    border: 1px solid #e5e5e5;
+    background: white;
+    font-family: 'Satoshi';
+    line-height: 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    padding: 6px 9px;
+}
+
+.right {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.left {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.pagination-area button i {
+    font-size: 7px;
+}
+
+.pages {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.pages button {
+    border: none;
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    color: #777;
+}
+
+.pages button.active {
+    background: #f1f1f1;
+    color: #111;
+}
+
+
+
+.mobile-filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    width: 100%;
+    height: 42px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+
+
+
+.offcanvas {
+    width: 280px !important;
+}
+
+.offcanvas-header {
+    border-bottom: 1px solid #eee;
+}
+
+.offcanvas-header h5 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.offcanvas-body {
+    padding: 15px;
+}
+
+
+
+
+@media (max-width: 991px) {
+
+    .shop-page {
+        max-width: 750px;
+    }
+
+    .products-header {
+        margin-top: 5px;
+    }
+
+    .product-image {
+        height: 210px;
+    }
+
+}
+
+
+
+
+@media (max-width: 575px) {
+
+    .shop-page {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .breadcrumb-area {
+        height: 35px;
+    }
+
+    .products-header {
+        font-size: 20px;
+        height: auto;
+        align-items: flex-start;
+        flex-direction: row;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+
+    .products-header h1 {
+        font-size: 22px;
+    }
+
+    .products-info {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 8px;
+    }
+
+    .products-info span {
+        font-family: 'Satoshi';
+        font-weight: 400;
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .product-grid {
+        row-gap: 20px;
+    }
+
+    .product-image {
+        height: 170px;
+        border-radius: 10px;
+    }
+
+    .product-card h5 {
+        font-size: 10px;
+    }
+
+    .rating span {
+        font-size: 10px;
+    }
+
+    .price {
+        font-size: 12px;
+    }
+
+    .pagination-area {
+        margin-top: 25px;
+    }
+
+    .pages {
+        gap: 2px;
+    }
+
+    .pages button {
+        width: 23px;
+        height: 23px;
+        font-size: 8px;
+    }
+
+}
+
+
+@media (max-width: 390px) {
+
+    .product-image {
+        height: 145px;
+    }
+
+    .products-info {
+        font-size: 7px;
+    }
+
+    .page-prev,
+    .page-next {
+        font-size: 7px !important;
+        padding: 5px 6px !important;
+    }
+
+    .pages button {
+        width: 20px;
+        height: 20px;
+    }
+
+    .right {
+        
+        font-size: 14px;
+    }
+
+    .left {
+        
+        font-size: 14px;
+    }
+
+}

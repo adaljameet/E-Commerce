@@ -1,9 +1,17 @@
 import React from 'react'
 import '../components/Header.css'
-import { FaChevronDown, FaSearch, FaShoppingCart, FaUserCircle } from 'react-icons/fa'
+import {
+    FaChevronDown,
+    FaSearch,
+    FaShoppingCart,
+    FaUserCircle
+} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+    const cart = useSelector((state) => state.cart.cartlist);
+    
     return (
         <>
             <nav className="navbar navbar-expand-lg shop-navbar">
@@ -12,6 +20,7 @@ const Header = () => {
                     <Link className="navbar-brand shop-logo" to="/">
                         SHOP.CO
                     </Link>
+
                     <button
                         className="navbar-toggler"
                         type="button"
@@ -53,6 +62,7 @@ const Header = () => {
 
                         <div className="search-box mx-lg-auto">
                             <FaSearch className="search-icon" />
+
                             <input
                                 type="text"
                                 placeholder="Search for products..."
@@ -60,10 +70,21 @@ const Header = () => {
                         </div>
 
                         <div className="nav-icons">
-                            <FaShoppingCart />
-                            <FaUserCircle />
+
+                            <Link to="/cart" className="cart-wrapper">
+
+                                <FaShoppingCart className="cart-icon" />
+                                <span>{cart.length}</span>
+
+
+                            </Link>
+
+                            <Link to="/">
+                                <FaUserCircle className="user-icon" />
+                            </Link>
 
                         </div>
+
                     </div>
                 </div>
             </nav>

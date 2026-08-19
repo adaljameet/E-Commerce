@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from 'react-icons/fa';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { Link } from 'react-router-dom';
 
 
 const Home = () => {
@@ -54,7 +55,7 @@ const Home = () => {
         await axios.get(
             "https://dummyjson.com/products/category/mens-shirts"
         ).then((res) => {
-            console.log(res.data);
+            // console.log(res.data);
             setProduct(res.data.products)
         })
 
@@ -152,7 +153,7 @@ const Home = () => {
                         })}
                     </div>
                     <div className='view-all-wrapper'>
-                        <button className='view-all-btn'>View All</button>
+                        <Link to='/category' className='view-all-btn'>View All</Link>
                     </div>
                 </section>
 
@@ -167,7 +168,7 @@ const Home = () => {
                         })}
                     </div>
                     <div className='view-all-wrapper'>
-                        <button className='view-all-btn'>View All</button>
+                        <Link to='/category' className='view-all-btn'>View All</Link>
                     </div>
                 </section>
             </div>

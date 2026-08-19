@@ -71,7 +71,6 @@
 }
 
 
-/* ================= SEARCH ================= */
 
 .search-box {
     width: 576px;
@@ -102,8 +101,6 @@
 }
 
 
-/* ================= NAV ICONS ================= */
-
 .nav-icons {
     display: flex;
     align-items: center;
@@ -114,4 +111,38 @@
 
 .nav-icons svg {
     cursor: pointer;
+}
+
+.cart-icon {
+    color: #000;
+}
+
+.user-icon {
+    color: #000;
+}
+
+.cart-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -9px;
+    right: -10px;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 4px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }

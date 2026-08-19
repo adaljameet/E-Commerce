@@ -180,6 +180,9 @@
 }
 
 .view-all-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #fff;
     border: 1px solid #e2e2e2;
     width: 218px;

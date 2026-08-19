@@ -32,15 +32,15 @@ const Card = ({ pdata }) => {
                             })}
                         </span>
                         <span className='rating-number'>
-                            {pdata.rating}
+                            {pdata.rating}/5
                         </span>
                     </div>
                     <div className='price-row'>
                         <span className='price'>
-                            ${pdata.price}
+                            ${(pdata.price * (1 - pdata.discountPercentage / 100)).toFixed(2)}
                         </span>
                         <span className='old-price'>
-
+                            <b>${pdata.discountPercentage}%</b>
                         </span>
                         <span className='discount'>
                             {pdata.discountPercentage}

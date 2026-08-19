@@ -9,6 +9,10 @@ import { GoPlus } from 'react-icons/go'
 import { GrFormSubtract } from 'react-icons/gr'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart, removeToCart } from '../Slice/Cartslice'
+
+
 
 const ProductDetail = () => {
 
@@ -16,31 +20,58 @@ const ProductDetail = () => {
     // console.log(id)
 
     const [product, setproductdata] = useState(null);
+    const [suggestproduct, setsuggestproduct] = useState(null);
+
+    const dispatch = useDispatch()
 
     async function getproductbyId(id) {
         await axios.get(`https://dummyjson.com/products/${id}`)
             .then((respons) => {
-                console.log(respons.data);
+                // console.log(respons.data);
                 setproductdata(respons.data)
             })
             .catch((err) => {
-                console.log(err)
+                // console.log(err)
             })
             .finally(
-                console.log('data fetched of single product')
-            )
+            // console.log('data fetched of single product')
+        )
     }
 
+    async function getAllProduct() {
+        await axios.get(`https://dummyjson.com/products/category/mens-shirts`)
+            .then((respons) => {
+                // console.log(respons.data);
+                var s_data = respons.data.products;
+
+                var rno = [...s_data].sort(() => 0.5 - Math.random())
+                // console.log(rno)
+                var suggestrecord = rno.slice(0, 4)
+                setsuggestproduct(suggestrecord)
+
+            })
+            .catch((err) => {
+                // console.log(err)
+            })
+            .finally(
+            // console.log('data fetched of product')
+        )
+    }
+
+    const cart = useSelector(state => state.cart.cartlist);
+
+
     useEffect(() => {
-        if (id) {
-            getproductbyId(id)
-        }
+        getproductbyId(id)
+        getAllProduct()
     }, [id])
+
+// console.log(product);
+
 
     return (
         <>
             <Header />
-
             <main className="container product-detail-container">
 
                 <div className="breadcrumb-area">
@@ -73,10 +104,7 @@ const ProductDetail = () => {
                                         )
                                     })}
                                 </div>
-
-
                             </div>
-
                         </div>
 
                         <div className="col-lg-6 product-info">
@@ -140,17 +168,17 @@ const ProductDetail = () => {
 
                                 <div className="quantity">
                                     <button>
-                                        <GrFormSubtract />
+                                        <GrFormSubtract onClick={() => dispatch(removeToCart(product))}/>
                                     </button>
 
-                                    <span>1</span>
+                                    <span>{cart.length}</span>
 
-                                    <button>
+                                    <button onClick={() => dispatch(addToCart(product))}>
                                         <GoPlus />
                                     </button>
                                 </div>
 
-                                <button className="add-cart">
+                                <button className="add-cart" onClick={() => dispatch(addToCart(product))}>
                                     Add to Cart
                                 </button>
 
@@ -382,9 +410,9 @@ const ProductDetail = () => {
                     <h2>YOU MIGHT ALSO LIKE</h2>
 
                     <div className="row g-3">
-                        {[1, 2, 3, 4].map((v, i) => {
+                        {suggestproduct && suggestproduct.map((v, i) => {
                             return (
-                                <Card pdata key={i} />
+                                <Card pdata={v} key={i} />
                             )
                         })}
                     </div>
