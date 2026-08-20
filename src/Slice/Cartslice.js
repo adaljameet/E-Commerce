@@ -38,7 +38,7 @@ const Cartslice = createSlice({
                 icon: "success",
                 title: "You added all the items!",
                 showConfirmButton: false,
-                timer: 2000
+                timer: 1500
             });
 
 
