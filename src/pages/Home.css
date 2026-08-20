@@ -338,182 +338,425 @@
 }
 
 
-@media (max-width: 991px) {
+/* =========================================
+   MOBILE DESIGN
+========================================= */
 
-    .shop-navbar {
-        padding: 10px 15px;
+@media (max-width: 576px) {
+
+    body {
+        overflow-x: hidden;
     }
 
-    .search-box {
-        width: 100%;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .nav-icons {
-        margin-bottom: 10px;
-    }
+    /* ================= HERO ================= */
 
     .hero-section {
+        width: 100%;
         min-height: auto;
+        overflow: hidden;
+        background: #f2f0ed;
     }
 
     .hero-section .row {
         min-height: auto;
+        margin: 0;
     }
 
+    .hero-section .container-fluid {
+        padding: 0 !important;
+    }
+
+    /* HERO CONTENT */
+
     .hero-content {
-        padding: 50px 30px;
+        width: 100%;
+        padding: 38px 22px 0;
     }
 
     .hero-content h1 {
-        font-size: 45px;
-    }
+        width: 100%;
+        height: auto;
 
-    .hero-image-container {
-        height: 500px;
-    }
+        font-size: 38px;
+        line-height: 1.05;
+        letter-spacing: -1.5px;
 
-    .brand-logo img {
-        width: 116px;
-        height: 23px;
-    }
-
-    .product-section {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-
-    .section-title {
-        font-size: 36px;
-    }
-
-    .dress-style-title {
-        font-size: 32px;
-    }
-
-    .style-card .casual {
-        width: 600px;
-        height: 383px;
-        position: absolute;
-        top: -70px;
-        left: -171px;
-        transform: rotateY(-180deg);
-    }
-
-    .style-card .formal {
-        position: absolute;
-        top: -88px;
-        left: -17px;
-        width: 709px;
-        height: 472px;
-    }
-
-    .style-card .party {
-        position: absolute;
-        width: 389px;
-        height: 311px;
-        top: -25px;
-    }
-
-    .style-card .gym {
-        position: absolute;
-        top: -86px;
-        left: 1px;
-        width: 361px;
-        height: 425px;
-    }
-}
-
-
-@media (max-width: 576px) {
-
-    .offer-bar {
-        font-size: 10px;
-    }
-
-    .close-offer {
-        right: 10px;
-    }
-
-    .shop-logo {
-        font-size: 24px;
-    }
-
-    .hero-content {
-        padding: 40px 20px;
-    }
-
-    .hero-content h1 {
-        align-items: center;
-        width: 300px;
-        height: 93px;
-        font-size: 36px;
-        letter-spacing: -1px;
+        margin: 0 0 22px;
     }
 
     .hero-content p {
-        line-height: 20px;
-        width: 320px;
-        height: 50px;
-        font-size: 13px;
+        width: 100%;
+        height: auto;
+
+        padding: 0;
+        margin: 0;
+
+        font-size: 14px;
+        line-height: 1.6;
+
+        color: rgba(0, 0, 0, 0.6);
     }
+
+    /* SHOP BUTTON */
 
     .shop-btn {
-        width: 282px;
+        position: static;
+
+        width: 100%;
         height: 52px;
-        padding: 16px 54px 16px 54px;
+
+        margin-top: 28px;
+
+        padding: 0;
+
+        border-radius: 30px;
+
+        font-size: 16px;
     }
 
+    /* ================= STATS ================= */
+
     .stats-row {
-        gap: 20px;
-        flex-wrap: wrap;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 0;
+
+        margin-top: 38px;
+        padding: 0 0 35px;
+    }
+
+    .stat-item {
+        text-align: center;
+        padding: 0 5px;
     }
 
     .stat-item h3 {
-        font-size: 25px;
+        font-size: 24px;
+        line-height: 1;
+
+        margin-bottom: 10px;
+        white-space: nowrap;
     }
 
     .stat-item span {
+        display: block;
+
         font-size: 9px;
+        line-height: 1.3;
+
+        color: #777;
     }
 
     .stat-item:not(:last-child)::after {
         display: none;
     }
 
+
+    /* ================= HERO IMAGE ================= */
+
     .hero-image-container {
-        height: 400px;
+        width: 100%;
+        height: 480px;
+
+        position: relative;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        overflow: hidden;
     }
 
-    .brand-section {
-        width: 390px;
-        padding: 15px 10px;
+    .hero-image {
+        position: absolute;
+
+        right: auto;
+        bottom: -5px;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        object-position: center bottom;
+    }
+
+
+    /* ================= STARS ================= */
+
+    .star {
+        position: absolute;
+        z-index: 3;
+
+        color: #000;
+        line-height: 1;
     }
 
     .star-one {
-        top: -90px;
-        left: 330px;
+        top: 35px;
+        right: 15px;
+
+        font-size: 65px;
     }
 
     .star-two {
-        top: 114px;
-        left: 50px;
+        top: 245px;
+        left: 20px;
+
+        font-size: 48px;
     }
 
+
+    /* ================= BRAND SECTION ================= */
+
+    .brand-section {
+        width: 100%;
+        min-height: auto;
+
+        padding: 18px 10px;
+
+        background: #000;
+    }
+
+    .brand-section .container-fluid {
+        padding: 0;
+    }
+
+    .brand-logo {
+        padding: 8px 5px;
+    }
+
+    .brand-logo img {
+        max-width: 100%;
+        width: 105px;
+        height: auto;
+        object-fit: contain;
+    }
+
+
+    /* ================= PRODUCT SECTION ================= */
+
     .product-section {
-        padding-top: 45px;
-        padding-bottom: 45px;
-        padding-left: 18px;
-        padding-right: 18px;
+        width: 100%;
+
+        padding: 45px 15px 45px;
     }
 
     .section-title {
         font-size: 30px;
-        margin-bottom: 30px;
+        line-height: 1.1;
+
+        letter-spacing: -1px;
+
+        margin-bottom: 28px;
     }
 
     .section-divider {
+        width: 100%;
+
         margin: 40px 0 45px;
+    }
+
+
+    /* ================= DRESS STYLE ================= */
+
+    .dress-style-section {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .dress-style-box {
+        border-radius: 22px;
+
+        padding: 30px 15px;
+    }
+
+    .dress-style-title {
+        font-size: 28px;
+        line-height: 1.1;
+
+        margin-bottom: 22px;
+    }
+
+    .style-card {
+        width: 100%;
+        height: 190px;
+
+        border-radius: 10px;
+    }
+
+    .style-card h3 {
+        top: 14px;
+        left: 16px;
+
+        font-size: 20px;
+    }
+
+
+    /* CASUAL */
+
+    .style-card .casual {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        object-fit: cover;
+
+        transform: rotateY(-180deg);
+    }
+
+
+    /* FORMAL */
+
+    .style-card .formal {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        object-fit: cover;
+    }
+
+
+    /* PARTY */
+
+    .style-card .party {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        object-fit: cover;
+    }
+
+
+    /* GYM */
+
+    .style-card .gym {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+
+        top: 0;
+        left: 0;
+
+        object-fit: cover;
+    }
+
+
+    /* ================= CUSTOMERS ================= */
+
+    .customer-section {
+        width: 100%;
+
+        padding: 45px 0 30px;
+
+        overflow: hidden;
+    }
+
+    .customer-hrader {
+        width: 100%;
+
+        padding: 0 15px 15px;
+    }
+
+    .customer-hrader h2 {
+        font-size: 30px;
+        line-height: 1.1;
+        letter-spacing: -1px;
+    }
+
+    .customer-slider {
+        padding: 15px 8px 0;
+    }
+
+    .customer-card {
+        min-height: auto;
+
+        padding: 22px 20px;
+
+        border-radius: 12px;
+    }
+
+    .customer-star {
+        font-size: 18px;
+    }
+
+    .customer-card h5 {
+        font-size: 17px;
+        margin-top: 8px;
+    }
+
+    .customer-card p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+        line-height: 1.05;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+        line-height: 1.55;
+    }
+
+    .shop-btn {
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .stats-row {
+        margin-top: 34px;
+    }
+
+    .stat-item h3 {
+        font-size: 22px;
+    }
+
+    .stat-item span {
+        font-size: 8px;
+    }
+
+    .hero-image-container {
+        height: 450px;
+    }
+
+    .star-one {
+        top: 35px;
+        right: 5px;
+        font-size: 55px;
+    }
+
+    .star-two {
+        top: 230px;
+        left: 15px;
+        font-size: 42px;
+    }
+
+    .brand-logo img {
+        width: 95px;
     }
 }
