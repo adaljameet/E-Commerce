@@ -5,12 +5,10 @@ import { Link, useParams } from 'react-router-dom'
 import { MdOutlineChevronRight, MdOutlineStar, MdOutlineStarBorder } from 'react-icons/md'
 import { FaChevronDown, FaSlidersH } from 'react-icons/fa'
 import Card from '../components/Card'
-import { GoPlus } from 'react-icons/go'
-import { GrFormSubtract } from 'react-icons/gr'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart, removeToCart } from '../Slice/Cartslice'
+import { addToCart } from '../Slice/Cartslice'
 
 
 
@@ -21,8 +19,8 @@ const ProductDetail = () => {
 
     const [product, setproductdata] = useState(null);
     const [suggestproduct, setsuggestproduct] = useState(null);
+    // const [cnt,setcnt] = useState(0)
 
-    const dispatch = useDispatch()
 
     async function getproductbyId(id) {
         await axios.get(`https://dummyjson.com/products/${id}`)
@@ -58,7 +56,8 @@ const ProductDetail = () => {
         )
     }
 
-    const cart = useSelector(state => state.cart.cartlist);
+    const dispatch = useDispatch()
+    useSelector(state => state.cart.cartlist);
 
 
     useEffect(() => {
@@ -66,8 +65,15 @@ const ProductDetail = () => {
         getAllProduct()
     }, [id])
 
-// console.log(product);
+    // console.log(product);
 
+    // function countnumber(no){
+    //     if(no === -1 && cnt === 0){
+    //         setcnt(0)
+    //     }else{
+    //         setcnt(cnt+no)
+    //     }
+    // }
 
     return (
         <>
@@ -166,17 +172,17 @@ const ProductDetail = () => {
 
                             <div className="cart-row">
 
-                                <div className="quantity">
-                                    <button>
-                                        <GrFormSubtract onClick={() => dispatch(removeToCart(product))}/>
+                                {/* <div className="quantity">
+                                    <button onClick={() => countnumber(-1)}>
+                                        <GrFormSubtract />
                                     </button>
 
-                                    <span>{cart.length}</span>
+                                    <span>{cnt}</span>
 
-                                    <button onClick={() => dispatch(addToCart(product))}>
+                                    <button onClick={() => countnumber(1)}>
                                         <GoPlus />
                                     </button>
-                                </div>
+                                </div> */}
 
                                 <button className="add-cart" onClick={() => dispatch(addToCart(product))}>
                                     Add to Cart

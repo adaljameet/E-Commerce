@@ -1,85 +1,29 @@
-.logo {
-    font-family: 'FONTSPRING DEMO - Integral CF Extra';
-    font-size: 33px;
-    text-decoration: none;
-    color: #000000;
-}
-
-.nav-link {
-    font-family: 'Satoshi';
-    font-style: normal;
-    color: #000000;
-}
-
-.dropdown-toggle::after {
-    display: inline-block;
-    margin-left: .255em;
-    vertical-align: .255em;
-    content: "";
-    border-top: .3em solid;
-    border-right: .3em solid transparent;
-    border-bottom: 0;
-    border-left: .3em solid transparent;
-}
-
-.form-control {
-    padding: 12px;
-    display: flex;
-    gap: 40px;
-    width: 576px;
-    border-radius: 50px;
-    border: none;
-    background-color: #F0F0F0;
-}
-
-.btn {
-    padding: 0;
-    border-radius: 50px;
-}
-
 .shop-navbar {
-    padding: 10px;
-    display: flex;
-    justify-content: space-around !important;
-    min-height: 75px;
     background: #fff;
-    border-bottom: 1px solid #eeeeee;
+    padding: 20px 0;
 }
 
 .shop-logo {
-    font-family: 'FONTSPRING DEMO - Integral CF Extra';
-    font-size: 33px;
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    letter-spacing: -1.5px;
-
+    font-family: 'FONTSPRING DEMO - Integral CF';
+    font-size: 38px;
+    font-weight: 900;
+    color: #000;
 }
 
 .nav-link {
-    color: #333 !important;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.nav-link:hover {
     color: #000 !important;
+    font-size: 16px;
 }
-
-.nav-link svg {
-    margin-left: 4px;
-}
-
 
 
 .search-box {
-    width: 576px;
-    height: 42px;
-    background: #f4f4f4;
+    width: 45%;
+    height: 48px;
+    background: #f2f2f2;
     border-radius: 30px;
     display: flex;
     align-items: center;
-    padding: 16px 12px;
+    padding: 0 18px;
 }
 
 .search-icon {
@@ -88,61 +32,122 @@
 }
 
 .search-box input {
-    width: 576px;
+    width: 100%;
     border: none;
     outline: none;
     background: transparent;
-    margin-left: 12px;
-    font-size: 13px;
-}
-
-.search-box input::placeholder {
-    color: #999;
+    padding-left: 15px;
+    font-size: 15px;
 }
 
 
 .nav-icons {
     display: flex;
     align-items: center;
-    gap: 20px;
-    font-size: 20px;
-    color: #222;
-}
-
-.nav-icons svg {
-    cursor: pointer;
-}
-
-.cart-icon {
-    color: #000;
-}
-
-.user-icon {
-    color: #000;
+    gap: 22px;
 }
 
 .cart-wrapper {
     position: relative;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
     color: #000;
+    display: flex;
 }
 
-.cart-badge {
+.cart-icon,
+.user-icon {
+    color: #000;
+    font-size: 23px;
+}
+
+.cart-wrapper span {
     position: absolute;
     top: -9px;
     right: -10px;
-    min-width: 17px;
+    font-size: 11px;
+    background: #000;
+    color: #fff;
+    width: 17px;
     height: 17px;
-    padding: 0 4px;
     border-radius: 50%;
-    background: red;
-    color: white;
-    font-size: 9px;
-    font-weight: 700;
     display: flex;
-    align-items: center;
     justify-content: center;
-    line-height: 1;
+    align-items: center;
+}
+
+
+.mobile-nav-icons {
+    display: none;
+}
+
+
+
+@media (max-width: 991px) {
+
+    .shop-navbar {
+        padding: 20px 24px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .shop-logo {
+        font-size: 30px;
+    }
+
+    .mobile-nav-icons {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .mobile-nav-icons .cart-icon,
+    .mobile-nav-icons .user-icon {
+        font-size: 23px;
+    }
+
+    .nav-icons {
+        display: none;
+    }
+
+
+    .navbar-toggler {
+        width: 80px;
+        height: 60px;
+        border: 4px solid #666;
+        border-radius: 12px;
+        padding: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+
+    .navbar-collapse {
+        width: 100%;
+    }
+
+    .navbar-nav {
+        margin-top: 15px;
+        gap: 0 !important;
+    }
+
+    .nav-item {
+        padding: 5px 0;
+    }
+
+    .nav-link {
+        font-size: 18px;
+    }
+
+    .search-box {
+        width: 100%;
+        margin: 20px 0 !important;
+    }
 }

@@ -1,5 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import ProductDetail from './pages/ProductDetail';
@@ -16,8 +17,8 @@ function App() {
         <Route path='/category' element={<Category />} />
         <Route path='/cart' element={<Cart />} />
 
-        
-        
+
+
       </Routes>
 
 

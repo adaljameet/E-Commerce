@@ -10,85 +10,102 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const Header = () => {
-    const cart = useSelector((state) => state.cart.cartlist);
-    
-    return (
-        <>
-            <nav className="navbar navbar-expand-lg shop-navbar">
-                <div className="container px-lg-5">
+    const cart = useSelector((state) => state.cart.cartlist)
 
-                    <Link className="navbar-brand shop-logo" to="/">
-                        SHOP.CO
+    return (
+        <nav className="navbar navbar-expand-lg shop-navbar">
+            <div className="container px-lg-5">
+
+                {/* Logo */}
+                <Link className="navbar-brand shop-logo" to="/">
+                    SHOP.CO
+                </Link>
+
+                {/* Mobile Cart + User */}
+                <div className="mobile-nav-icons">
+
+                    <Link to="/cart" className="cart-wrapper">
+                        <FaShoppingCart className="cart-icon" />
+                        <span>{cart.length}</span>
                     </Link>
 
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#mainNavbar"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
+                    <Link to="/">
+                        <FaUserCircle className="user-icon" />
+                    </Link>
 
-                    <div className="collapse navbar-collapse" id="mainNavbar">
+                </div>
 
-                        <ul className="navbar-nav ms-lg-4 gap-lg-3">
+                {/* Hamburger */}
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">
-                                    Shop <FaChevronDown size={10} />
-                                </Link>
-                            </li>
+                <div className="collapse navbar-collapse" id="mainNavbar">
 
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">
-                                    On Sale
-                                </Link>
-                            </li>
+                    {/* Menu */}
+                    <ul className="navbar-nav ms-lg-4 gap-lg-3">
 
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">
-                                    New Arrivals
-                                </Link>
-                            </li>
-
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">
-                                    Brands
-                                </Link>
-                            </li>
-
-                        </ul>
-
-                        <div className="search-box mx-lg-auto">
-                            <FaSearch className="search-icon" />
-
-                            <input
-                                type="text"
-                                placeholder="Search for products..."
-                            />
-                        </div>
-
-                        <div className="nav-icons">
-
-                            <Link to="/cart" className="cart-wrapper">
-
-                                <FaShoppingCart className="cart-icon" />
-                                <span>{cart.length}</span>
-
-
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/">
+                                Shop <FaChevronDown size={10} />
                             </Link>
+                        </li>
 
-                            <Link to="/">
-                                <FaUserCircle className="user-icon" />
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/">
+                                On Sale
                             </Link>
+                        </li>
 
-                        </div>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/">
+                                New Arrivals
+                            </Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/">
+                                Brands
+                            </Link>
+                        </li>
+
+                    </ul>
+
+                    {/* Search */}
+                    <div className="search-box mx-lg-auto">
+                        <FaSearch className="search-icon" />
+
+                        <input
+                            type="text"
+                            placeholder="Search for products..."
+                        />
+                    </div>
+
+                    {/* Desktop Icons */}
+                    <div className="nav-icons">
+
+                        <Link to="/cart" className="cart-wrapper">
+                            <FaShoppingCart className="cart-icon" />
+                            <span>{cart && cart.length}</span>
+                        </Link>
+
+                        <Link to="/">
+                            <FaUserCircle className="user-icon" />
+                        </Link>
 
                     </div>
+
                 </div>
-            </nav>
-        </>
+            </div>
+        </nav>
     )
 }
 

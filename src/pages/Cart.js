@@ -1,17 +1,46 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../pages/Cart.css'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 import { MdOutlineChevronRight } from 'react-icons/md'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { addToCart, removeToCart } from '../Slice/Cartslice'
+import { GoArrowRight } from 'react-icons/go'
 
 
 
 
-const Cart = () => {
+const Cart = ({ product }) => {
 
     const cartitem = useSelector(state => state.cart.cartlist)
+
+    const dispatch = useDispatch();
+
+    const [subtotal, setsubtotal] = useState(0)
+    const [discount, setdiscount] = useState(0)
+
+    useEffect(() => {
+        function subtotalfn() {
+            var data = [...cartitem];
+            var agg_total = 0;
+            var agg_dis = 0;
+            data.map((v, i) => {
+                const total = v.price * v.counter;
+                const dis = (total * (v.counter * v.discountPercentage) / 100).toFixed(2)
+                // const dis_price = total * dis / 100
+                agg_total += total;
+                agg_dis += Number(dis);
+                var obj = { "subtotal": total, "discount": dis }
+                return obj
+            })
+            setsubtotal(agg_total)
+            setdiscount(agg_dis)
+            // console.log(calculation)
+        }
+
+        subtotalfn()
+    }, [cartitem])
 
 
     return (
@@ -30,7 +59,7 @@ const Cart = () => {
                     <div className="col-lg-7">
                         {cartitem && cartitem.length > 0 ? (
                             cartitem.map((v, i) => (
-                                <div className="cart-box" key={v.id || i}>
+                                <div className="cart-box mb-2" key={i}>
                                     <div className="cart-product">
                                         <div className="product-images">
                                             <img
@@ -53,17 +82,14 @@ const Cart = () => {
                                             </div>
 
                                             <div className="product-price">
-                                                ${v.price}
+                                                ${(v.price * v.counter).toFixed(2)} <span className='text-danger' style={{ fontSize: 12 }}>{(v.discountPercentage * v.counter).toFixed(2)} %</span>
                                             </div>
 
                                         </div>
-                                        <button className="delete-btn">
-                                            <i className="bi bi-trash-fill"></i>
-                                        </button>
                                         <div className="quantity">
-                                            <button>−</button>
-                                            <span>1</span>
-                                            <button>+</button>
+                                            <button onClick={() => dispatch(removeToCart(v))}>−</button>
+                                            <span>{v.counter}</span>
+                                            <button onClick={() => dispatch(addToCart(v))}>+</button>
                                         </div>
                                     </div>
                                 </div>
@@ -84,36 +110,23 @@ const Cart = () => {
                             </h2>
                             <div className="summary-row">
                                 <span>Subtotal</span>
-                                <strong>$565</strong>
+                                <strong>${subtotal.toFixed(2)}</strong>
                             </div>
                             <div className="summary-row discount">
-                                <span>Discount (-20%)</span>
-                                <strong>-$113</strong>
+                                <span>Discount</span>
+                                <strong>-${discount.toFixed(2)}</strong>
                             </div>
                             <div className="summary-row">
                                 <span>Delivery Fee</span>
-                                <strong>$15</strong>
+                                <strong>Free</strong>
                             </div>
                             <div className="summary-row total-row">
                                 <span>Total</span>
-                                <strong>$467</strong>
-                            </div>
-                            <div className="promo-area">
-                                <div className="email-box promo-input">
-                                    <i className="bi bi-tag"></i>
-
-                                    <input
-                                        type="text"
-                                        placeholder="Add promo code"
-                                    />
-                                </div>
-                                <button className="apply-btn">
-                                    Apply
-                                </button>
+                                <strong>${(subtotal - discount).toFixed(2)}</strong>
                             </div>
                             <button className="checkout-btn">
                                 Go to Checkout
-                                <i className="bi bi-arrow-right"></i>
+                                <GoArrowRight className='ps-1' style={{ fontSize: "20px" }} />
                             </button>
                         </div>
                     </div>
