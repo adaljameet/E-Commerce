@@ -9,7 +9,7 @@ const Card = ({ pdata }) => {
     return (
         <>
 
-            <div className='col-12 col-sm-6 col-lg-3'>
+            <div className='col-6 col-sm-6 col-lg-3'>
                 <div className='product-card'>
                     <div className='product-image-box'>
                         <Link to={`/productdetail/${pdata.id}`}><img src={pdata.thumbnail} alt={pdata.title} className='product-image' /></Link>

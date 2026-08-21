@@ -153,8 +153,6 @@ const Cart = () => {
 
                     </div>
 
-
-                    {/* ORDER SUMMARY */}
                     <div className="col-lg-5">
 
                         <div className="summary-box">
