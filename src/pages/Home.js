@@ -153,7 +153,7 @@ const Home = () => {
                         })}
                     </div>
                     <div className='view-all-wrapper'>
-                        <Link to='/category' className='view-all-btn'>View All</Link>
+                        <Link to='/' className='view-all-btn'>View All</Link>
                     </div>
                 </section>
 
@@ -168,7 +168,7 @@ const Home = () => {
                         })}
                     </div>
                     <div className='view-all-wrapper'>
-                        <Link to='/category' className='view-all-btn'>View All</Link>
+                        <Link to='/' className='view-all-btn'>View All</Link>
                     </div>
                 </section>
             </div>
