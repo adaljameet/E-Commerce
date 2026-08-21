@@ -43,6 +43,7 @@
     gap: 2px;
     color: #ffc633;
     font-size: 20px;
+    margin-bottom: 0;
 }
 
 .rating-number {
@@ -65,7 +66,7 @@
 
 .old-price {
     font-size: 19px;
-    color: #999;
+    color: #ff4b4b;
     text-decoration: line-through;
     font-weight: 500;
 }
