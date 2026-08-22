@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaStar } from 'react-icons/fa';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Link } from 'react-router-dom';
+
 
 
 const Home = () => {
