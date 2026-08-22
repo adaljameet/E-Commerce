@@ -26,8 +26,7 @@ const Cart = () => {
 
             const total = Number(v.price) * Number(v.counter)
 
-            const dis =
-                total * Number(v.discountPercentage || 0) / 100
+            const dis = total * Number(v.discountPercentage || 0) / 100
 
             agg_total += total
             agg_dis += dis
@@ -42,9 +41,7 @@ const Cart = () => {
     return (
         <>
             <Header />
-
             <div className="cart-container">
-
                 <div className="breadcrumb-area">
                     <Link to="/">Home</Link>
 
@@ -60,33 +57,21 @@ const Cart = () => {
                 </h1>
 
                 <div className="row g-3">
-
-                    {/* CART PRODUCTS */}
                     <div className="col-lg-7">
-
                         {cartitem && cartitem.length > 0 ? (
-
                             cartitem.map((v, i) => (
-
                                 <div
                                     className="cart-box mb-2"
                                     key={v.id || i}
                                 >
-
                                     <div className="cart-product">
-
-                                        {/* IMAGE */}
                                         <div className="product-images">
 
                                             <img
                                                 src={v.thumbnail}
                                                 alt={v.title}
                                             />
-
                                         </div>
-
-
-                                        {/* PRODUCT INFO */}
                                         <div className="product-info">
 
                                             <div className="product-name">
@@ -107,8 +92,6 @@ const Cart = () => {
 
                                         </div>
 
-
-                                        {/* QUANTITY */}
                                         <div className="quantity">
 
                                             <button

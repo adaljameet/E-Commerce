@@ -79,10 +79,6 @@
     border-radius: 20px;
 }
 
-
-
-
-
 @media (max-width: 991px) {
 
     .product-image-box {
@@ -126,6 +122,4 @@
         margin-bottom: 0;
         font-size: 10px;
     }
-
-
 }

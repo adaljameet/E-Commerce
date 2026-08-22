@@ -3,7 +3,6 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { Link, useParams } from 'react-router-dom'
 import { MdOutlineChevronRight, MdOutlineStar, MdOutlineStarBorder } from 'react-icons/md'
-import { FaChevronDown, FaSlidersH } from 'react-icons/fa'
 import Card from '../components/Card'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
@@ -210,31 +209,11 @@ const ProductDetail = () => {
                     </section>
 
                     <section className="reviews-section">
-
                         <div className="reviews-header">
-
                             <h3>
                                 All Reviews <span>(451)</span>
                             </h3>
-
-                            <div className="review-actions">
-
-                                <button className="filter-btn">
-                                    <FaSlidersH />
-                                </button>
-
-                                <button className="latest-btn">
-                                    Latest <FaChevronDown size={9} />
-                                </button>
-
-                                <button className="write-review">
-                                    Write a Review
-                                </button>
-
-                            </div>
-
                         </div>
-
                         <div className="row g-3">
 
                             <div className="col-lg-6 col-md-6 col-12">

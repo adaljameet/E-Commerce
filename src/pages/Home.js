@@ -152,9 +152,9 @@ const Home = () => {
                             )
                         })}
                     </div>
-                    <div className='view-all-wrapper'>
+                    {/* <div className='view-all-wrapper'>
                         <Link to='/' className='view-all-btn'>View All</Link>
-                    </div>
+                    </div> */}
                 </section>
 
                 <div className='section-divider'></div>
@@ -167,9 +167,9 @@ const Home = () => {
                             )
                         })}
                     </div>
-                    <div className='view-all-wrapper'>
+                    {/* <div className='view-all-wrapper'>
                         <Link to='/' className='view-all-btn'>View All</Link>
-                    </div>
+                    </div> */}
                 </section>
             </div>
 

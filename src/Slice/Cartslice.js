@@ -24,7 +24,6 @@ const Cartslice = createSlice({
             }
             else {
                 var p_data = { ...product, counter: 1 }
-                // var list = [...state.cartlist ,p_data]
                 state.cartlist.push(p_data)
             }
             // state.cartlist.push(action.payload)
