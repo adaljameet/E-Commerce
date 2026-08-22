@@ -1,6 +1,8 @@
 .shop-navbar {
     background: #fff;
     padding: 20px 0;
+    position: relative;
+    z-index: 1000;
 }
 
 .shop-logo {
@@ -23,11 +25,14 @@
     display: flex;
     align-items: center;
     padding: 0 18px;
+    position: relative;
+    z-index: 1000;
 }
 
 .search-icon {
     color: #777;
     font-size: 20px;
+    flex-shrink: 0;
 }
 
 .search-box input {
@@ -39,6 +44,74 @@
     font-size: 15px;
 }
 
+.search-suggestions {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 6px 0;
+    list-style: none;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    z-index: 9999;
+}
+
+.suggestion-item {
+    width: 100%;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    padding: 9px 14px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.suggestion-item:hover {
+    background: #f5f5f5;
+}
+
+.suggestion-image {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: #f3f3f3;
+    flex-shrink: 0;
+}
+
+.suggestion-content {
+    flex: 1;
+    min-width: 0;
+    margin-left: 12px;
+}
+
+.suggestion-content h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.suggestion-content p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #888;
+}
+
+.suggestion-price {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    white-space: nowrap;
+}
 
 .nav-icons {
     display: flex;
@@ -77,6 +150,7 @@
     display: none;
 }
 
+
 @media (max-width: 991px) {
 
     .shop-navbar {
@@ -108,7 +182,6 @@
         display: none;
     }
 
-
     .navbar-toggler {
         width: 80px;
         height: 60px;
@@ -124,13 +197,13 @@
         box-shadow: none;
     }
 
-
     .navbar-collapse {
         width: 100%;
     }
 
     .navbar-nav {
         margin-top: 15px;
+
         gap: 0 !important;
     }
 
@@ -138,12 +211,21 @@
         padding: 5px 0;
     }
 
+
     .nav-link {
         font-size: 18px;
     }
 
     .search-box {
         width: 100%;
+
         margin: 20px 0 !important;
     }
+
+    .search-suggestions {
+        top: 55px;
+
+        width: 100%;
+    }
+
 }

@@ -11,6 +11,7 @@ import Footer from '../components/Footer';
 
 
 
+
 const Home = () => {
 
     var settings = {
@@ -48,8 +49,8 @@ const Home = () => {
         ]
     };
 
+ 
     const [product, setProduct] = useState(null);
-
 
     async function getdata() {
         await axios.get(
@@ -63,7 +64,6 @@ const Home = () => {
 
     useEffect(() => {
         getdata()
-
     }, [])
 
 
