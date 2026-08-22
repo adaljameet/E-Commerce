@@ -6,7 +6,7 @@ import {
     FaShoppingCart,
     FaUserCircle
 } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import axios from 'axios'
 
@@ -17,6 +17,7 @@ const Header = () => {
     const [query, setQuery] = useState("")
     const [suggestions, setSuggestions] = useState([])
     const [products, setProducts] = useState([])
+     const navigate = useNavigate();
 
 
     useEffect(() => {
@@ -50,8 +51,9 @@ const Header = () => {
     }, [query, products])
 
     const handleSuggestionClick = (product) => {
-        setQuery(product.title)
-        setSuggestions([])
+        setQuery(product.title);
+        navigate(`/productdetail/${product.id}`);
+        setSuggestions([]);
     }
 
 
